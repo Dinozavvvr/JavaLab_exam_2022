@@ -22,7 +22,7 @@ public class FreemarkerConfiguration {
         freemarker.template.Configuration cfg =
                 new freemarker.template.Configuration(freemarker.template.Configuration.VERSION_2_3_31);
         FileTemplateLoader templateLoader = new FileTemplateLoader(
-                new File("src/main/resources/templates"));
+                new File("/src/main/resources/templates"));
         cfg.setTemplateLoader(templateLoader);
         return cfg;
     }
