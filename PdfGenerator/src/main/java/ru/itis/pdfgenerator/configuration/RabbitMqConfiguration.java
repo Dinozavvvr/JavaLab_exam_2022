@@ -1,6 +1,7 @@
 package ru.itis.pdfgenerator.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
@@ -30,6 +31,21 @@ public class RabbitMqConfiguration {
 
     @Value("${rabbit.connection.host}")
     private String host;
+
+    @Bean
+    public Queue grantQueue() {
+        return new Queue(GRANT_QUEUE_NAME, false);
+    }
+
+    @Bean
+    public Queue budgetQueue() {
+        return new Queue(BUDGET_QUEUE_NAME, false);
+    }
+
+    @Bean
+    public Queue otchislenQueue() {
+        return new Queue(OTCHISLEN_QUEUE_NAME, false);
+    }
 
     @Bean
     public ConnectionFactory connectionFactory() {
