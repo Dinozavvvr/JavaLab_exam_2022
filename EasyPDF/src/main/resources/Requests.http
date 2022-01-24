@@ -1,0 +1,63 @@
+POST http://localhost:8080/api/v1/signup
+Content-Type: application/json
+
+{
+  "login": "dinar2",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:8080/api/v1/signin
+Content-Type: application/json
+
+{
+  "login": "dinar2",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:8080/api/v1/generate/grant
+Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkFDVElWRSIsImlkIjoyLCJsb2dpbiI6ImRpbmFyMSIsImV4cCI6MTY0NTUzMDE3NCwiaWF0IjoxNjQyOTM4MTc0fQ.OdCo-8WPZft_xxLhJTQBMLY6OIxB7exgOig5d5U73pM
+Content-Type: application/json
+
+{
+  "name" : "Dinar",
+  "surname" : "Shagaliev",
+  "patronymic" : "Robertovich",
+  "from" : "1 February 2022",
+  "to": "30 May 2022"
+}
+
+###
+
+POST http://localhost:8080/api/v1/generate/otchislenie
+Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkFDVElWRSIsImlkIjoyLCJsb2dpbiI6ImRpbmFyMSIsImV4cCI6MTY0NTUzMDE3NCwiaWF0IjoxNjQyOTM4MTc0fQ.OdCo-8WPZft_xxLhJTQBMLY6OIxB7exgOig5d5U73pM
+Content-Type: application/json
+
+{
+  "name" : "Dinar",
+  "surname" : "Shagaliev",
+  "patronymic" : "Robertovich"
+}
+
+###
+
+POST http://localhost:8080/api/v1/generate/budget
+Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkFDVElWRSIsImlkIjoyLCJsb2dpbiI6ImRpbmFyMSIsImV4cCI6MTY0NTUzMDE3NCwiaWF0IjoxNjQyOTM4MTc0fQ.OdCo-8WPZft_xxLhJTQBMLY6OIxB7exgOig5d5U73pM
+Content-Type: application/json
+
+{
+  "name" : "Dinar",
+  "surname" : "Shagaliev",
+  "patronymic" : "Robertovich",
+  "from" : "1 February 2022"
+}
+
+###
+
+GET http://localhost:8080/logout
+Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkFDVElWRSIsImlkIjoxLCJsb2dpbiI6ImRpbmFyIiwiZXhwIjoxNjQ1NDc1NDY2LCJpYXQiOjE2NDI4ODM0NjZ9.Lu2KhO1Uz6e66PNqN3uDzptqxyk5GFVKBvEw6WM6lCE
+
+
