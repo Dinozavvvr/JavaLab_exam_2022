@@ -11,5 +11,7 @@ RUN mvn -f /home/app/pom.xml clean package
 #
 FROM openjdk:11-jre-slim
 COPY --from=build /home/app/target/PdfGenerator-0.1.jar /usr/local/lib/app.jar
+COPY templates /usr/local/lib/
+COPY templates /templates
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/usr/local/lib/app.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=prod","-jar","/usr/local/lib/app.jar"]
